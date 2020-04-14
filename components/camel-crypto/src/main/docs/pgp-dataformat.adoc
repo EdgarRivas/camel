@@ -164,6 +164,7 @@ Map<String, String> userId2Passphrase = new HashMap<String, String>(2);
 userId2Passphrase.put("UserIdOfKey1","passphrase1"); // you must specify the exact User ID!
 userId2Passphrase.put("UserIdOfKey2","passphrase2");
 PGPPassphraseAccessor passphraseAccessor = new PGPPassphraseAccessorDefault(userId2Passphrase);
+// Be aware that PGPPassphraseAccessorDefault was changed to DefaultPGPPassphraseAccessor from camel 3.x.x
 
 PGPDataFormat pgpVerifyAndDecrypt = new PGPDataFormat();
 pgpVerifyAndDecrypt.setPassphraseAccessor(passphraseAccessor);
